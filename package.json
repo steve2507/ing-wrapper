@@ -1,0 +1,6 @@
+{
+  "name": "ing-wrapper",
+  "dependencies": {
+    "oohttp": "*"
+  }
+}
