@@ -1,6 +1,3 @@
-const oohttp = require('oohttp');
-const sha256 = require('crypto').createHash('sha256');
-
 const IngHttpWrapper = require('lib/IngHttpWrapper');
 
 class IngWrapper {
