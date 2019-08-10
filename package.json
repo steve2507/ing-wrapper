@@ -2,5 +2,10 @@
   "name": "ing-wrapper",
   "dependencies": {
     "oohttp": "*"
-  }
+  },
+  "devDependencies": {
+		"eslint": "*",
+		"eslint-plugin-import": "*",
+		"eslint-config-airbnb-base": "*"
+	}
 }

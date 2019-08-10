@@ -1,0 +1,31 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "script"
+  },
+  "extends": "airbnb-base",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "global-require": "off",
+    "import/no-dynamic-require": "off",
+    "comma-dangle": ["error", "never"],
+    "no-underscore-dangle": "off",
+    "no-mixed-operators": "off",
+    "no-multi-assign": "warn",
+    "default-case": "off",
+    "strict": ["error", "global"],
+    "no-console": "off",
+    "no-continue": "off",
+    "guard-for-in": "off",
+    "no-restricted-syntax": ["off"],
+    "no-param-reassign": "off",
+    "max-classes-per-file": [1, 5]
+  },
+  "plugins": [
+    "import"
+  ]
+}

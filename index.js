@@ -1,4 +1,6 @@
-const { IngHttpBase } = require('lib/IngHttpWrapper');
+'use strict';
+
+const { IngHttpBase } = require('./lib/IngHttpWrapper');
 
 class IngWrapper {
   constructor({ url, customerAccessToken }) {
@@ -14,8 +16,8 @@ class IngWrapper {
   }
 
   init() {
-    initHttp();
-    initLib();
+    this.initHttp();
+    this.initLib();
   }
 
   /**
@@ -23,18 +25,18 @@ class IngWrapper {
    */
   initHttp() {
     this.http = new IngHttpBase('api.ing.com/v2/');
-    this.http.headers['Authorization'] = this.customerAccessToken;
+    this.http.headers.Authorization = this.customerAccessToken;
   }
 
   /**
    * Iniatate all lib classes.
    */
   initLib() {
-    Object.assign(this, require('lib/Base.js')(this));
-    Object.assign(this, require('lib/Customer.js')(this));
-    Object.assign(this, require('lib/Account.js')(this));
-    Object.assign(this, require('lib/Balance.js')(this));
-    Object.assign(this, require('lib/Transaction.js')(this));
+    Object.assign(this, require('./lib/Base.js')(this));
+    Object.assign(this, require('./lib/Customer.js')(this));
+    Object.assign(this, require('./lib/Account.js')(this));
+    Object.assign(this, require('./lib/Balance.js')(this));
+    Object.assign(this, require('./lib/Transaction.js')(this));
   }
 }
 
