@@ -1,4 +1,4 @@
-const IngHttpWrapper = require('lib/IngHttpWrapper');
+const { IngHttpBase } = require('lib/IngHttpWrapper');
 
 class IngWrapper {
   constructor({ url, customerAccessToken }) {
@@ -22,7 +22,7 @@ class IngWrapper {
    * Setup a base http handler.
    */
   initHttp() {
-    this.http = new IngHttpWrapper('api.ing.com/v2/');
+    this.http = new IngHttpBase('api.ing.com/v2/');
     this.http.headers['Authorization'] = this.customerAccessToken;
   }
 
